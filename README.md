@@ -1,5 +1,8 @@
 # msa-numerical-example
-Code and data for the illustrative case study application
+Code and data for the case study application.
+This repository complements the methods described in our paper:
+
+📄 *A Comprehensive Framework for Statistical Inference in Measurement System Assessment Studies* ([arXiv:2501.18037](https://arxiv.org/abs/2501.18037))
 
 ## 📊 Example Data
 The example dataset (`example_data.csv`) contains measurements over five days, with each day corresponding to an individual manufacturing cycle. 
@@ -14,10 +17,17 @@ The key surface texture characteristics are the 'arithmetic mean height' (sa) an
 | `sa`       | measured value of the arithmetic mean height |
 | `sz`       | measured value of the maximum height         |
 
+## 🔧 Surface Texture Model
+This is an analysis of variance problem involving $5$ days ($5$ cycles) and $3$ printed items each day. The underlying model for the texture roughness indicator at location $x$ is given by,
+$Y_{ij}(x) = \mu(x) + U_{i}(x) + \epsilon_{ij}(x),$ for $i=1,\ldots,5$ and $j=1,\ldots,3$.
 
-## 🔧 Analysis Overview
+
+##  📈 Analysis Overview
+### Location-wise analysis
+
+We initially applied a one-way ANOVA model, detailed in the paper, to the roughness measurements at all $14$ locations.
 We demonstrate how to:
 - Estimate variance components: $\sigma^2_u$ (between-unit) and $\sigma^2_\epsilon$ (within-unit)
-- Compute $\rho = \sigma^2_u / (\sigma^2_u + \sigma^2_\epsilon)$
+- Compute $\rho = \sigma^2_u / \sigma^2_\epsilon$
 
 
