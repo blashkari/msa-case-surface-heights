@@ -1,4 +1,4 @@
-# Case Study: Estimation of Variance Components for Surface Texture Measurements
+# Case Study for Measurement System Assessment Using Surface Texture Data
 
 This repository contains an illustrative example of estimating variance components and signal-to-noise ratios (SNR) for surface texture measurements collected from additively manufactured parts.
 
@@ -59,7 +59,7 @@ The SNR estimates for each location are visualized using `ggplot2`, including a 
 From the analysis, we observe the following:
 
 - For both the **arithmetic mean height** (`sa`) and **maximum height** (`sz`) indicators, the estimated SNR exhibits spikes at specific locations, such as location **6**.
-- For the `sa` values, the estimated SNR consistently remains **below 2** across all locations. This suggests that $\sigma^2_e$ is the dominant source of variability in this measurement.
+- For the `sa` values, the estimated SNR consistently remains **below 2** across all locations. This suggests that the **item's error** is the dominant source of variability in this measurement.
 - However, for the `sz` values, the estimated SNR **reaches the cut-off value of 2** at one location. This indicates that at that specific location, **between-day variation** plays a more significant role.
 
 ## 📚 Reference 
