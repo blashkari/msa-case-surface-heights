@@ -3,9 +3,8 @@
 This repository contains an illustrative example of estimating variance components and signal-to-noise ratios (SNR) for surface texture measurements collected from additively manufactured parts.
 
 ## 📄 Files
-  - case_study_msa_variance_estimation.R
-  Step-by-step script using base R to reshape the data, estimate variance components and SNR for each location, and generate a plot of SNR estimates across locations.
-  - `sa_surface_data.csv` Surface texture measurement dataset
+  - `case_study_msa_variance_estimation.R`: Step-by-step script using base R to reshape the data, estimate variance components and SNR for each location, and generate a plot of SNR estimates across locations.
+  - `sa_surface_data.csv`: Surface texture measurement dataset
 
     
 ## 🧾 Data Description
