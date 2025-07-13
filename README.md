@@ -36,7 +36,7 @@ Below is a sample of the first few rows from 'surface_data.csv':
 
 The goal is to estimate:
 - **Between-day variance component** ($\sigma^2_u$)
-- **Within-day (residual) variance component** ($\sigma^2_e$)
+- **Within-day variance component** ($\sigma^2_e$)
 - **Signal-to-noise ratio** (SNR), computed as:
 
 $$
