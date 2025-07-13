@@ -1,10 +1,10 @@
-# Case Study for Measurement System Assessment Using Surface Texture Data
+# Supplementary Case Study for Measurement System Assessment Using Surface Texture Data
 
-This repository contains an illustrative example of estimating variance components and signal-to-noise ratios (SNR) for surface texture measurements collected from additively manufactured parts.
+This repository contains an illustrative example of estimating variance components and signal-to-noise ratios (SNR) for surface texture measurements collected from additively manufactured parts. 
 
 ## 📄 Files
   - `case_study_msa_variance_estimation.R`: Step-by-step script using base R to reshape the data, estimate variance components and SNR for each location, and generate a plot of SNR estimates across locations.
-  - `sa_surface_data.csv`: Surface texture measurement dataset
+  - `surface_data.csv`: Surface texture measurement dataset
 
     
 ## 🧾 Data Description
@@ -17,7 +17,7 @@ This repository contains an illustrative example of estimating variance componen
 | `sa`       | Arithmetic mean height of the surface   |
 | `sz`       | Maximum height of the surface           |
 
-Each day represents a new manufacturing cycle using the same setup and design. Measurements were taken at 14 consistent locations on each item.
+Each day represents a new manufacturing cycle using the same setup and design. Measurements were taken at 14 consistent locations on each item. There are 3 printed items per cycle.
 
 ### 👁️ Data Preview
 Below is a sample of the first few rows from 'surface_data.csv':
@@ -63,10 +63,12 @@ From the analysis, we observe the following:
 - However, for the `sz` values, the estimated SNR **reaches the cut-off value of 2** at one location. This indicates that at that specific location, **between-day variation** plays a more significant role.
 
 ## 📚 Reference 
-This illustrative example demonstrates the methods described in the following paper:
+- This illustrative example demonstrates the methods described in the following paper:
 
 📄 *A Comprehensive Framework for Statistical Inference in Measurement System Assessment Studies* ([arXiv:2501.18037](https://arxiv.org/abs/2501.18037))
 
 The scripts and analysis included here provide a simplified implementation of variance component estimation and signal-to-noise ratio (SNR) analysis, in line with the statistical modeling and inference approaches discussed in the paper.
 If you use or adapt this example for research or teaching, please consider citing the paper.
+
+- The dataset `surface_data.csv` is acquired from the *Multi-Scale Additive Manufacturing Lab*.
 
