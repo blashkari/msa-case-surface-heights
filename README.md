@@ -1,4 +1,4 @@
-# Supplementary Case Study for Measurement System Assessment Using Surface Texture Data
+# Supplementary Case Study for A Measurement System Assessment Using Surface Texture Data
 
 This repository contains an illustrative example of estimating variance components and signal-to-noise ratios (SNR) for surface texture measurements collected from additively manufactured parts. 
 
@@ -17,7 +17,7 @@ This repository contains an illustrative example of estimating variance componen
 | `sa`       | Arithmetic mean height of the surface   |
 | `sz`       | Maximum height of the surface           |
 
-Each day represents a new manufacturing cycle using the same setup and design. Measurements were taken at 14 consistent locations on each item. There are 3 printed items per cycle.
+Each day represents a new manufacturing cycle using the same setup and design. There are 3 printed items per cycle, all derived from the same design, and utilizing the exact setup on the manufacturing platform. The key surface characteristics used to measure roughness are the *arithmetic mean height* and *maximum height*. Measurements were taken at 14 consistent locations on each item. 
 
 ### 👁️ Data Preview
 Below is a sample of the first few rows from 'surface_data.csv':
@@ -35,12 +35,12 @@ Below is a sample of the first few rows from 'surface_data.csv':
 ## 🧮 Statistical Objective
 
 The goal is to estimate:
-- **Between-day variance component** ($\sigma^2_u$)
+- **Between-day variance component** ( represented as $\sigma^2_u$)
 - **Within-day variance component** ($\sigma^2_e$)
-- **Signal-to-noise ratio** (SNR), computed as:
+- **Signal-to-noise ratio** (SNR). The maximum likelihood estimator of SNR is computed as:
 
 $$
-\text{SNR} = \sqrt{\max\left(0, \frac{1}{r} \left(\beta^{-1}\frac{MS_u}{MS_e} - 1 \right)\right)}
+\widehat{\text{SNR}} = \sqrt{\max\left(0, \frac{1}{r} \left(\beta^{-1}\frac{MS_u}{MS_e} - 1 \right)\right)}
 $$
   
 where $r=3$, and $\beta = \frac{a}{a-1}$  for $a=5$ days.
@@ -53,7 +53,10 @@ setwd("your/path/here")
 ```
 ##  📈 Plot
 
-The SNR estimates for each location are visualized using `ggplot2`, including a dashed red reference line at SNR = 2.
+The SNR estimates for each location are visualized using `ggplot2`, with a dashed red reference line at an SNR of 2.
+
+
+
 
 ## 🔍 Observations
 From the analysis, we observe the following:
