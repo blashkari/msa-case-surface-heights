@@ -54,7 +54,8 @@ setwd("your/path/here")
 ##  📈 Plot
 
 The SNR estimates for each location are visualized using `ggplot2`, with a dashed red reference line at an SNR of 2.
-![Simulation results for estimator comparison](figures/SNR_sz.jpeg)
+![Simulation results for estimator comparison](figures/SNR_sa.jpg)
+![Simulation results for estimator comparison](figures/SNR_sz.jpg)
 
 
 
